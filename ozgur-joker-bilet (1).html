@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Not Joker, Özgür Joker - Film Lansman Bileti | biletinial</title>
+<meta name="description" content="Not Joker, Özgür Joker film lansman bileti burada! Tarihi, mekanı ve bilet fiyatlarını görmek için hemen tıkla!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green: #3dab5d;
+    --green-dark: #2d8a49;
+    --green-light: #e8f7ed;
+    --orange: #ff6b00;
+    --text: #1a1a2e;
+    --text-light: #6b7280;
+    --border: #e5e7eb;
+    --bg: #f8f9fa;
+    --white: #ffffff;
+    --red: #e53e3e;
+    --yellow-star: #f6c90e;
+    --header-height: 64px;
+  }
+
+  body {
+    font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* HEADER */
+  .header {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: var(--header-height);
+  }
+  .header-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .logo-img { height: 32px; width: auto; display: block; flex-shrink: 0; }
+  .header-search {
+    flex: 1;
+    max-width: 480px;
+    position: relative;
+  }
+  .header-search input {
+    width: 100%;
+    border: 1.5px solid var(--border);
+    border-radius: 24px;
+    padding: 9px 16px 9px 40px;
+    font-size: 13px;
+    outline: none;
+    font-family: inherit;
+    color: var(--text);
+    background: #f3f4f6;
+  }
+  .header-search input:focus { border-color: var(--green); background: #fff; }
+  .header-search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+  }
+  .header-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .btn-login {
+    background: var(--green);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background .2s;
+  }
+  .btn-login:hover { background: var(--green-dark); }
+
+  /* BREADCRUMB */
+  .breadcrumb {
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 10px 0;
+  }
+  .breadcrumb-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 12px;
+    color: var(--text-light);
+  }
+  .breadcrumb-inner a { color: var(--green); text-decoration: none; }
+  .breadcrumb-inner span { margin: 0 6px; }
+
+  /* HERO */
+  .hero {
+    background: #0d0d1a;
+    position: relative;
+    overflow: hidden;
+    min-height: 420px;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: 
+      linear-gradient(180deg, rgba(13,13,26,0.45) 0%, rgba(13,13,26,0.85) 100%),
+      url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><defs><radialGradient id="g1" cx="30%25" cy="40%25"><stop offset="0%25" stop-color="%23553c9a" stop-opacity=".7"/><stop offset="100%25" stop-color="%23000" stop-opacity="0"/></radialGradient><radialGradient id="g2" cx="70%25" cy="60%25"><stop offset="0%25" stop-color="%23b7a51a" stop-opacity=".5"/><stop offset="100%25" stop-color="%23000" stop-opacity="0"/></radialGradient></defs><rect width="100" height="100" fill="%230d0d1a"/><ellipse cx="30" cy="40" rx="60" ry="60" fill="url(%23g1)"/><ellipse cx="70" cy="60" rx="60" ry="60" fill="url(%23g2)"/></svg>') center/cover;
+  }
+  .hero-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+  }
+  .hero-poster {
+    flex-shrink: 0;
+    width: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0,0,0,.7);
+    position: relative;
+  }
+  .hero-poster svg { width: 100%; display: block; }
+  .hero-poster-badge {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,.7);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    border: 1px solid rgba(255,255,255,.2);
+  }
+  .hero-info { flex: 1; color: #fff; }
+  .hero-tags { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+  .hero-tag {
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.2);
+    color: #e0d7ff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+  .hero-tag.drama { background: rgba(167,139,250,.15); border-color: #a78bfa; }
+  .hero-tag.new { background: rgba(61,171,93,.2); border-color: #3dab5d; color: #6ddB8d; }
+  .hero-title {
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 6px;
+    letter-spacing: -1px;
+  }
+  .hero-title .joker-text {
+    background: linear-gradient(90deg, #c0a020, #ffe566, #a07800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-subtitle {
+    font-size: 13px;
+    color: rgba(255,255,255,.6);
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+  .hero-quote {
+    font-size: 15px;
+    color: #d4caff;
+    margin-bottom: 20px;
+    font-style: italic;
+    border-left: 3px solid #7c3aed;
+    padding-left: 14px;
+    line-height: 1.6;
+  }
+  .hero-meta { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 24px; }
+  .hero-meta-item { display: flex; flex-direction: column; gap: 2px; }
+  .hero-meta-label { font-size: 10px; color: rgba(255,255,255,.4); text-transform: uppercase; letter-spacing: 1px; }
+  .hero-meta-value { font-size: 14px; font-weight: 700; color: #fff; }
+  .hero-meta-value.green { color: #6ddb8d; }
+  .hero-cta-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .btn-buy-hero {
+    background: linear-gradient(135deg, #3dab5d, #2d8a49);
+    color: #fff;
+    border: none;
+    border-radius: 28px;
+    padding: 14px 36px;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+    font-family: inherit;
+    letter-spacing: .3px;
+    box-shadow: 0 8px 24px rgba(61,171,93,.4);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .btn-buy-hero:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(61,171,93,.5); }
+  .hero-stock {
+    background: rgba(229,62,62,.15);
+    border: 1px solid #e53e3e;
+    color: #fc8181;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .hero-stock::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: #e53e3e;
+    border-radius: 50%;
+    animation: pulse 1.2s infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+  /* TABS */
+  .tabs-bar {
+    background: #fff;
+    border-bottom: 2px solid var(--border);
+    position: sticky;
+    top: var(--header-height);
+    z-index: 90;
+  }
+  .tabs-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .tabs-inner::-webkit-scrollbar { display: none; }
+  .tab {
+    padding: 16px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-light);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    transition: color .2s, border-color .2s;
+    margin-bottom: -2px;
+    text-decoration: none;
+  }
+  .tab.active, .tab:hover { color: var(--green); border-bottom-color: var(--green); }
+
+  /* MAIN */
+  .main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 20px;
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 32px;
+    align-items: start;
+  }
+
+  /* SECTION */
+  .section { background: #fff; border-radius: 12px; padding: 28px; margin-bottom: 20px; border: 1px solid var(--border); }
+  .section-title {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--border);
+    letter-spacing: -.3px;
+  }
+
+  /* DETAIL TEXT */
+  .detail-text { font-size: 14px; color: #374151; line-height: 1.75; }
+  .detail-text p { margin-bottom: 14px; }
+  .detail-text strong { color: var(--text); }
+  .detail-meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .detail-meta-cell {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+  }
+  .detail-meta-cell .label { font-size: 11px; color: var(--text-light); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 4px; }
+  .detail-meta-cell .value { font-size: 14px; font-weight: 700; color: var(--text); }
+
+  /* CAST */
+  .cast-row { display: flex; gap: 20px; flex-wrap: wrap; }
+  .cast-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    cursor: pointer;
+    width: 80px;
+  }
+  .cast-avatar {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,.15);
+    border: 3px solid #fff;
+    background: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .2s;
+  }
+  .cast-card:hover .cast-avatar { transform: scale(1.05); }
+  .cast-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .cast-avatar svg { width: 40px; height: 40px; }
+  .cast-name { font-size: 12px; font-weight: 700; color: var(--text); }
+  .cast-role { font-size: 11px; color: var(--text-light); }
+
+  /* TICKET SIDEBAR */
+  .ticket-box {
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,.08);
+    position: sticky;
+    top: calc(var(--header-height) + 60px);
+  }
+  .ticket-box-header {
+    background: linear-gradient(135deg, #1a1a2e, #2d1b69);
+    padding: 20px;
+    color: #fff;
+  }
+  .ticket-box-header h3 { font-size: 16px; font-weight: 900; margin-bottom: 4px; }
+  .ticket-box-header p { font-size: 12px; color: rgba(255,255,255,.6); }
+  .ticket-event {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .ticket-event-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .ticket-event-row:last-child { margin-bottom: 0; }
+  .ticket-icon {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    background: var(--green-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green);
+    flex-shrink: 0;
+  }
+  .ticket-icon svg { width: 16px; height: 16px; }
+  .ticket-event-label { font-size: 11px; color: var(--text-light); margin-bottom: 2px; }
+  .ticket-event-value { font-size: 13px; font-weight: 700; color: var(--text); }
+  .ticket-date-badge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 48px; height: 52px;
+    background: var(--green);
+    border-radius: 10px;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .ticket-date-badge .day { font-size: 20px; font-weight: 900; line-height: 1; }
+  .ticket-date-badge .month { font-size: 10px; font-weight: 700; text-transform: uppercase; }
+  .ticket-stock-bar {
+    padding: 10px 20px;
+    background: #fff5f5;
+    border-bottom: 1px solid #fed7d7;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #c53030;
+  }
+  .stock-dot { width: 8px; height: 8px; background: #e53e3e; border-radius: 50%; flex-shrink: 0; animation: pulse 1.2s infinite; }
+  .ticket-price-section { padding: 16px 20px; border-bottom: 1px solid var(--border); }
+  .ticket-price-label { font-size: 11px; color: var(--text-light); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 8px; }
+  .ticket-price-from { display: flex; align-items: baseline; gap: 6px; }
+  .ticket-price-amount { font-size: 28px; font-weight: 900; color: var(--text); }
+  .ticket-price-currency { font-size: 16px; font-weight: 700; color: var(--text); }
+  .ticket-price-note { font-size: 11px; color: var(--text-light); margin-top: 4px; }
+  .ticket-buy-section { padding: 16px 20px; }
+  .btn-buy {
+    width: 100%;
+    background: linear-gradient(135deg, #3dab5d, #2d8a49);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    font-family: inherit;
+    letter-spacing: .3px;
+    box-shadow: 0 6px 20px rgba(61,171,93,.35);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .btn-buy:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(61,171,93,.45); }
+  .ticket-rules-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 12px;
+    cursor: pointer;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  /* SEAT CATEGORIES */
+  .seat-categories { padding: 0 20px 16px; }
+  .seat-category-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 13px;
+  }
+  .seat-category-row:last-child { border-bottom: none; }
+  .seat-dot { width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; display: inline-block; }
+  .seat-name { font-weight: 600; }
+  .seat-price { font-weight: 700; color: var(--text); }
+  .seat-avail { font-size: 11px; color: var(--text-light); }
+
+  /* SCORE */
+  .score-big { font-size: 52px; font-weight: 900; color: var(--text); line-height: 1; }
+  .score-stars { color: #f6c90e; font-size: 20px; margin: 4px 0; letter-spacing: 2px; }
+  .score-count { font-size: 12px; color: var(--text-light); }
+  .score-bars { margin-top: 14px; }
+  .score-bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; font-size: 12px; color: var(--text-light); }
+  .score-bar-track { flex: 1; height: 6px; background: #f3f4f6; border-radius: 3px; overflow: hidden; }
+  .score-bar-fill { height: 100%; background: #f6c90e; border-radius: 3px; }
+  .score-bar-label { width: 16px; text-align: right; font-weight: 700; }
+
+  /* REVIEWS */
+  .review-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  .review-card:last-child { margin-bottom: 0; }
+  .review-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+  .review-user-row { display: flex; align-items: center; gap: 10px; }
+  .review-avatar {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #e5e7eb;
+    flex-shrink: 0;
+  }
+  .review-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .review-avatar svg { width: 36px; height: 36px; }
+  .review-user { font-size: 13px; font-weight: 700; color: var(--text); }
+  .review-verified { font-size: 10px; color: var(--green); font-weight: 600; }
+  .review-stars { color: #f6c90e; font-size: 13px; letter-spacing: 1px; }
+  .review-text { font-size: 13px; color: #4b5563; line-height: 1.6; }
+  .review-date { font-size: 11px; color: var(--text-light); margin-top: 6px; }
+
+  /* RULES */
+  .rules-list { list-style: none; }
+  .rules-list li {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 13px;
+    color: #374151;
+    line-height: 1.5;
+    align-items: flex-start;
+  }
+  .rules-list li:last-child { border-bottom: none; }
+  .rules-icon {
+    width: 18px; height: 18px;
+    flex-shrink: 0;
+    margin-top: 1px;
+    color: #d97706;
+  }
+
+  /* RECOMMENDED */
+  .rec-section { background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 20px; border: 1px solid var(--border); }
+  .rec-title { font-size: 16px; font-weight: 900; margin-bottom: 16px; }
+  .rec-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
+  .rec-card { cursor: pointer; }
+  .rec-thumb {
+    width: 100%;
+    aspect-ratio: 2/3;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .rec-thumb-inner {
+    width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rec-thumb-inner svg { width: 48px; height: 48px; opacity: .4; }
+  .rec-card-title { font-size: 12px; font-weight: 700; color: var(--text); }
+  .rec-card-price { font-size: 11px; color: var(--green); font-weight: 700; margin-top: 2px; }
+
+  /* AI BADGE */
+  .ai-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  /* TAG */
+  .tag { display: inline-block; background: #f0fdf4; color: var(--green); font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-right: 6px; }
+  .tag.drama { background: #f5f3ff; color: #7c3aed; }
+
+  /* POSTER in section */
+  .poster-in-section {
+    float: right;
+    width: 180px;
+    margin: 0 0 20px 24px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(0,0,0,.18);
+  }
+  .poster-in-section svg { width: 100%; display: block; }
+
+  /* FOOTER */
+  .footer {
+    background: #1a1a2e;
+    color: rgba(255,255,255,.6);
+    padding: 48px 0 24px;
+    margin-top: 40px;
+  }
+  .footer-inner { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 32px; }
+  .footer-col-title { font-size: 13px; font-weight: 700; color: rgba(255,255,255,.9); margin-bottom: 14px; text-transform: uppercase; letter-spacing: .8px; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,.5); text-decoration: none; margin-bottom: 8px; transition: color .2s; }
+  .footer-col a:hover { color: rgba(255,255,255,.9); }
+  .footer-logo-img { height: 28px; width: auto; display: block; margin-bottom: 10px; filter: brightness(0) invert(1); }
+  .footer-desc { font-size: 13px; color: rgba(255,255,255,.4); line-height: 1.6; margin-bottom: 14px; }
+  .footer-phone { color: rgba(255,255,255,.7); font-size: 14px; font-weight: 600; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-copyright { font-size: 12px; color: rgba(255,255,255,.3); }
+  .footer-payment { display: flex; gap: 10px; align-items: center; }
+  .payment-badge {
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .payment-badge.visa { color: #1a1aff; background: #fff; }
+  .payment-badge.mc { color: #eb001b; background: #fff; }
+  .payment-badge.troy { color: #003087; background: #fff; }
+
+  /* RESPONSIVE */
+  @media (max-width: 960px) {
+    .main { grid-template-columns: 1fr; }
+    .ticket-box { position: static; }
+    .rec-grid { grid-template-columns: repeat(2,1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .hero-poster { width: 140px; }
+  }
+  @media (max-width: 600px) {
+    .hero-inner { flex-direction: column; }
+    .hero-poster { width: 160px; margin: 0 auto; }
+    .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+    .detail-meta-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#">
+      <img class="logo-img" src="https://b6s54eznn8xq.merlincdn.net/dist/assets/img/logodark.svg" alt="biletinial">
+    </a>
+    <div class="header-search">
+      <svg class="header-search-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" placeholder="Etkinlik, mekan veya sanatçı ara...">
+    </div>
+    <div class="header-actions">
+      <button class="btn-login">Giris Yap</button>
+    </div>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="#">Ana Sayfa</a><span>›</span>
+    <a href="#">Sinema</a><span>›</span>
+    <a href="#">Ozel Lansman</a><span>›</span>
+    Not Joker, Özgür Joker
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-poster">
+      <img src="https://i.hizliresim.com/1sygsdb.png" alt="Not Joker, Özgür Joker" style="width:100%;display:block;">
+      <div class="hero-poster-badge">Lansman Gösterimi</div>
+    </div>
+
+    <div class="hero-info">
+      <div class="hero-tags">
+        <span class="hero-tag drama">Psikolojik Drama</span>
+        <span class="hero-tag drama">Felsefi</span>
+        <span class="hero-tag new">Özel Lansman</span>
+      </div>
+      <h1 class="hero-title">Not Joker, <span class="joker-text">Özgür Joker</span></h1>
+      <p class="hero-subtitle">PorterStudio Yapimi — Dağıtım: Porters</p>
+      <p class="hero-quote">"Gerçek delilik, kendin için düşünebilmektir."</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Tarih</span>
+          <span class="hero-meta-value">1 Temmuz 2026, Çarşamba</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Saat</span>
+          <span class="hero-meta-value">20:00</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Mekan</span>
+          <span class="hero-meta-value">Zorlu PSM Turkcell Sahnesi</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Bilet Fiyatı</span>
+          <span class="hero-meta-value green">750 TL'den baslayan</span>
+        </div>
+      </div>
+      <div class="hero-cta-row">
+        <button class="btn-buy-hero" onclick="document.getElementById('buy-section').scrollIntoView({behavior:'smooth'})">BILETINI AL</button>
+        <span class="hero-stock">Son 87 Bilet</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<nav class="tabs-bar">
+  <div class="tabs-inner">
+    <a class="tab active" href="#detail">Detay</a>
+    <a class="tab" href="#cast">Kadro</a>
+    <a class="tab" href="#buy-section">Biletler</a>
+    <a class="tab" href="#reviews">Yorumlar</a>
+    <a class="tab" href="#rules">Etkinlik Kuralları</a>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+  <div class="content-col">
+
+    <!-- DETAIL -->
+    <section class="section" id="detail">
+      <h2 class="section-title">Not Joker, Özgür Joker</h2>
+      <div class="detail-text">
+        <div class="poster-in-section">
+          <img src="https://i.hizliresim.com/1sygsdb.png" alt="Not Joker, Özgür Joker" style="width:100%;display:block;">
+        </div>
+        <p><span class="tag drama">Psikolojik Drama</span><span class="tag drama">Felsefi</span><span class="tag">Özgür Irade</span></p>
+        <br>
+        <p>Yıllar boyunca kendi kararlarını verdiğini sanan bir adam, aslında düşüncelerinin ve seçimlerinin görünmeyen bir güç tarafından yönlendirildiğini fark eder. İçindeki bu esaret onu yalnızlığa, öfkeye ve acıya sürüklemiştir. Bu karanlık hali, zincirlenmiş ve susturulmuş <strong>"Joker"</strong> olarak sembolize edilir.</p>
+        <p>Bir gün karşısına, olabileceği kişi çıkar: <strong>Özgür Joker</strong>. Korkularını, dayatmaları ve zihnini yöneten görünmez güçleri aşmış olan bu versiyonu; özgür iradeyi, bireyselliği ve kendi kaderini tayin etme cesaretini temsil eder.</p>
+        <p>İki karakter arasında fiziksel değil, <strong>zihinsel ve ruhsal bir mücadele</strong> başlar. Esaret altındaki Joker, yıllardır kendisini kontrol eden karanlık etkilerden kurtulmaya çalışırken, Özgür Joker ona özgürlüğün bedelini ve sorumluluğunu gösterir.</p>
+        <p>Filmin sonunda asıl soru şudur: <em>"İnsan gerçekten kendi hayatını mı yaşar, yoksa fark etmediği güçlerin yazdığı bir senaryoyu mu oynar?"</em></p>
+        <p><strong>Not Joker, Özgür Joker</strong>; özgür irade, kimlik, bireysel uyanış ve kişinin kendi zihni üzerindeki hakimiyetini konu alan psikolojik ve felsefi bir drama filmidir.</p>
+      </div>
+      <div class="detail-meta-grid">
+        <div class="detail-meta-cell"><div class="label">Film Türü</div><div class="value">Psikolojik Drama, Felsefi</div></div>
+        <div class="detail-meta-cell"><div class="label">Yas Sınırı</div><div class="value">15+</div></div>
+        <div class="detail-meta-cell"><div class="label">Yönetmen</div><div class="value">Doğukan Yesilova</div></div>
+        <div class="detail-meta-cell"><div class="label">Senarist</div><div class="value">Murat Avcı</div></div>
+        <div class="detail-meta-cell"><div class="label">Yapımcı</div><div class="value">PorterStudio</div></div>
+        <div class="detail-meta-cell"><div class="label">Dağıtım</div><div class="value">Porters</div></div>
+      </div>
+    </section>
+
+    <!-- CAST -->
+    <section class="section" id="cast">
+      <h2 class="section-title">Kadro</h2>
+      <div class="cast-row">
+
+        <div class="cast-card">
+          <div class="cast-avatar">
+            <img src="https://i.hizliresim.com/96t4hjk.jpg" alt="Özgür Eliçevik">
+          </div>
+          <div class="cast-name">Özgür Eliçevik</div>
+          <div class="cast-role">Başrol</div>
+        </div>
+
+        <div class="cast-card">
+          <div class="cast-avatar">
+            <img src="https://cdn.britannica.com/42/123642-050-7D2AD1BF/Heath-Ledger-2006.jpg" alt="Heath Ledger">
+          </div>
+          <div class="cast-name">Heath Ledger</div>
+          <div class="cast-role">Başrol</div>
+        </div>
+
+        <div class="cast-card">
+          <div class="cast-avatar">
+            <img src="https://i.hizliresim.com/8yuv0ip.jpg" alt="Doğukan Yeşilova">
+          </div>
+          <div class="cast-name">Doğukan Yesilova</div>
+          <div class="cast-role">Yönetmen</div>
+        </div>
+
+        <div class="cast-card">
+          <div class="cast-avatar">
+            <img src="https://i.hizliresim.com/7zi5u03.jpg" alt="Murat Avcı">
+          </div>
+          <div class="cast-name">Murat Avcı</div>
+          <div class="cast-role">Senarist</div>
+        </div>
+
+        <div class="cast-card">
+          <div class="cast-avatar">
+            <img src="https://i.pravatar.cc/150?img=46" alt="PorterStudio">
+          </div>
+          <div class="cast-name">PorterStudio</div>
+          <div class="cast-role">Yapımcı</div>
+        </div>
+
+        <div class="cast-card">
+          <div class="cast-avatar">
+            <img src="https://i.pravatar.cc/150?img=22" alt="Porters">
+          </div>
+          <div class="cast-name">Porters</div>
+          <div class="cast-role">Dağıtım</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SCORE & REVIEWS -->
+    <section class="section" id="reviews">
+      <h2 class="section-title">Bu filme kac puan veriyorsunuz?</h2>
+
+      <div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin-bottom:24px;">
+        <div>
+          <div class="score-big">4.91</div>
+          <div class="score-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="score-count">167 kullanıcı değerlendirdi</div>
+        </div>
+        <div class="score-bars" style="flex:1; min-width:200px;">
+          <div class="score-bar-row"><span class="score-bar-label">5</span><div class="score-bar-track"><div class="score-bar-fill" style="width:91%"></div></div><span>152</span></div>
+          <div class="score-bar-row"><span class="score-bar-label">4</span><div class="score-bar-track"><div class="score-bar-fill" style="width:8%"></div></div><span>12</span></div>
+          <div class="score-bar-row"><span class="score-bar-label">3</span><div class="score-bar-track"><div class="score-bar-fill" style="width:2%"></div></div><span>3</span></div>
+          <div class="score-bar-row"><span class="score-bar-label">2</span><div class="score-bar-track"><div class="score-bar-fill" style="width:0%"></div></div><span>0</span></div>
+          <div class="score-bar-row"><span class="score-bar-label">1</span><div class="score-bar-track"><div class="score-bar-fill" style="width:0%"></div></div><span>0</span></div>
+        </div>
+      </div>
+
+      <!-- Reviews -->
+      <div style="margin-bottom:20px;">
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-user-row">
+              <div class="review-avatar">
+                <img src="https://i.pravatar.cc/80?img=5" alt="">
+              </div>
+              <div>
+                <div class="review-user">Ahmet K.</div>
+                <div class="review-verified">Doğrulanmış İzleyici</div>
+              </div>
+            </div>
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          </div>
+          <div class="review-text">Yıllardır böyle bir film izlemedim. Hem felsefi derinliği hem de görsel gücüyle izleyiciyi başından sonuna kadar sarıyor. Özgür Eliçevik'in performansı inanılmazdı, sahneden gözlerimi alamadım.</div>
+          <div class="review-date">2 Haziran 2026</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-user-row">
+              <div class="review-avatar">
+                <img src="https://i.pravatar.cc/80?img=47" alt="">
+              </div>
+              <div>
+                <div class="review-user">Selin D.</div>
+                <div class="review-verified">Doğrulanmış İzleyici</div>
+              </div>
+            </div>
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          </div>
+          <div class="review-text">Zihinsel özgürlük üzerine bu kadar derin bir şey beklemiyordum açıkçası. Filmden çıktıktan sonra günlerce düşündürdü beni. Doğukan Yesilova'nın yönetmenlik anlayışı gerçekten özgün.</div>
+          <div class="review-date">28 Mayıs 2026</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-user-row">
+              <div class="review-avatar">
+                <img src="https://i.pravatar.cc/80?img=68" alt="">
+              </div>
+              <div>
+                <div class="review-user">Burak T.</div>
+                <div class="review-verified">Doğrulanmış İzleyici</div>
+              </div>
+            </div>
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          </div>
+          <div class="review-text">Görsel anlatım şahane, müzikler muhteşem uyum içinde. "Özgür Joker" karakterinin sahneye her girişinde tüylerim diken diken oldu. Murat Avcı'nın senaryosu çok güçlü.</div>
+          <div class="review-date">20 Mayıs 2026</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-user-row">
+              <div class="review-avatar">
+                <img src="https://i.pravatar.cc/80?img=32" alt="">
+              </div>
+              <div>
+                <div class="review-user">Zeynep A.</div>
+                <div class="review-verified">Doğrulanmış İzleyici</div>
+              </div>
+            </div>
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+          </div>
+          <div class="review-text">Son derece etkileyici bir film. Özgür irade kavramını bu kadar somut ve çarpıcı biçimde aktarabilmek büyük bir başarı. Biraz daha uzun olmasını dilerdim ama lansman gecesi atmosferi de ayrı bir güzellikti.</div>
+          <div class="review-date">15 Mayıs 2026</div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:16px; border-top:1px solid var(--border); padding-top:16px;">
+        <p style="font-size:13px; color:var(--text-light); margin-bottom:12px;">Etkinlik hakkındaki yorumunuzu bizimle paylaşır mısınız?</p>
+        <textarea style="width:100%; border:1.5px solid var(--border); border-radius:8px; padding:12px; font-family:inherit; font-size:13px; resize:vertical; min-height:80px; outline:none;" placeholder="Yorumunuzu buraya yazın..."></textarea>
+        <div style="display:flex; justify-content:flex-end; margin-top:8px;">
+          <button style="background:var(--green); color:#fff; border:none; border-radius:8px; padding:10px 24px; font-size:13px; font-weight:700; cursor:pointer; font-family:inherit; transition:background .2s;" onmouseover="this.style.background='#2d8a49'" onmouseout="this.style.background='#3dab5d'">Gönder</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RULES -->
+    <section class="section" id="rules">
+      <h2 class="section-title">Etkinlik Kuralları</h2>
+      <ul class="rules-list">
+        <li>
+          <svg class="rules-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Gününde ve saatinde kullanılmayan biletler geçersiz olup bilet bedeli ve hizmet bedeli iadesi ve/veya değişiklik yapılması mümkün değildir.
+        </li>
+        <li>
+          <svg class="rules-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Organizasyon sahibi kurum ve/veya kuruluşlar etkinlik alanında oturum düzeni ve planında uygun gördüğü durumlarda yer değişikliği yapma hakkına sahiptir.
+        </li>
+        <li>
+          <svg class="rules-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Kullanıcı Biletinial üzerinden satın almış olduğu biletler için geçerli olan yas sınırı (15+) kurallarına uyduğunu kabul eder. Kimlik ibrazı zorunludur.
+        </li>
+        <li>
+          <svg class="rules-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Indirimli bilet tanımı olması durumunda kullanıcı bu indirimli bilete tabi olduğunu kabul ve taahhüt eder. İndirimli biletler için kimlik ibrazı zorunludur.
+        </li>
+        <li>
+          <svg class="rules-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Etkinlik saatine geç kalınması durumunda Biletinial kullanıcının etkinlik mekanına alınması konusunda hiçbir şekilde sorumlu değildir.
+        </li>
+        <li>
+          <svg class="rules-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Zorlu Performans Sanatları Merkezi kuralları geçerlidir. Büyük boy çanta, yiyecek ve içecek (su hariç) etkinlik salonuna alınmaz.
+        </li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="buy-section">
+    <div class="ticket-box">
+      <div class="ticket-box-header">
+        <h3>Not Joker, Özgür Joker</h3>
+        <p>Film Lansman Gösterimi · Özel Etkinlik</p>
+      </div>
+
+      <div class="ticket-event">
+        <div class="ticket-event-row">
+          <div class="ticket-date-badge">
+            <span class="day">01</span>
+            <span class="month">TEM</span>
+          </div>
+          <div>
+            <div class="ticket-event-label">Tarih ve Saat</div>
+            <div class="ticket-event-value">1 Temmuz 2026, Çarşamba — 20:00</div>
+          </div>
+        </div>
+        <div class="ticket-event-row">
+          <div class="ticket-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="ticket-event-label">Mekan</div>
+            <div class="ticket-event-value">Zorlu PSM Turkcell Sahnesi</div>
+            <div style="font-size:11px; color:var(--text-light);">Zorlu Center, Besiktas / Istanbul</div>
+          </div>
+        </div>
+        <div class="ticket-event-row">
+          <div class="ticket-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <div>
+            <div class="ticket-event-label">Etkinlik Türü</div>
+            <div class="ticket-event-value">Özel Lansman Gösterimi</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ticket-stock-bar">
+        <div class="stock-dot"></div>
+        Son 87 Bilet Kaldı
+      </div>
+
+      <div class="seat-categories">
+        <div style="font-size:11px; color:var(--text-light); text-transform:uppercase; letter-spacing:.8px; padding:12px 0 6px; font-weight:700;">Bilet Kategorileri</div>
+        <div class="seat-category-row">
+          <div><span class="seat-dot" style="background:#6366f1;"></span><span class="seat-name">VIP Balkon</span></div>
+          <div><div class="seat-price">2.500 TL</div><div class="seat-avail">Sınırlı</div></div>
+        </div>
+        <div class="seat-category-row">
+          <div><span class="seat-dot" style="background:#f59e0b;"></span><span class="seat-name">Parter Gold</span></div>
+          <div><div class="seat-price">1.500 TL</div><div class="seat-avail">32 koltuk</div></div>
+        </div>
+        <div class="seat-category-row">
+          <div><span class="seat-dot" style="background:#3dab5d;"></span><span class="seat-name">Parter Standart</span></div>
+          <div><div class="seat-price">750 TL</div><div class="seat-avail">55 koltuk</div></div>
+        </div>
+      </div>
+
+      <div class="ticket-price-section">
+        <div class="ticket-price-label">Baslangıç Fiyatı</div>
+        <div class="ticket-price-from">
+          <span class="ticket-price-amount">750</span>
+          <span class="ticket-price-currency">TL</span>
+          <span style="font-size:12px; color:var(--text-light);">/ kisi</span>
+        </div>
+        <div class="ticket-price-note">Hizmet bedeli dahil · KDV dahil</div>
+      </div>
+
+      <div class="ticket-buy-section">
+        <button class="btn-buy" onclick="alert('Biletinial ödeme sayfasına yönlendiriliyorsunuz...')">BILETINI AL</button>
+        <a class="ticket-rules-link" href="#rules">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Etkinlik Kurallarını Oku
+        </a>
+      </div>
+    </div>
+
+    <div style="margin-top:16px; background:#fff; border-radius:12px; padding:16px; border:1px solid var(--border);">
+      <div class="ai-badge">Biletinial AI</div>
+      <div style="font-size:13px; font-weight:700; margin-bottom:8px;">Sana Özel Öneri</div>
+      <div style="font-size:12px; color:var(--text-light); line-height:1.6;">Psikolojik drama türünü seviyorsan bu lansman gösterimi tam sana göre. Özgür irade ve kimlik felsefesini sinemada keşfet.</div>
+    </div>
+  </aside>
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img class="footer-logo-img" src="https://b6s54eznn8xq.merlincdn.net/dist/assets/img/logodark.svg" alt="biletinial">
+        <div class="footer-desc">Türkiye'nin en büyük bilet platformu. Tiyatrodan sinemaya, konserden spora binlerce etkinlik.</div>
+        <div class="footer-phone">0850 333 99 11 Müsteri Hizmetleri</div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Kurumsal</div>
+        <a href="#">Hakkımızda</a>
+        <a href="#">Kisisel Verilerin Korunması</a>
+        <a href="#">Sözlesme ve Politikalar</a>
+        <a href="#">Kurumsal Kimlik</a>
+        <a href="#">Müsteri Hizmetleri</a>
+        <a href="#">Iletisim</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Yardım</div>
+        <a href="#">Sıkça Sorulan Sorular</a>
+        <a href="#">Iptal, Iade ve Değisim</a>
+        <a href="#">Nasıl Bilet Alınır</a>
+        <a href="#">Biletinizi Mi Kaybettiniz?</a>
+        <a href="#">Online Ödeme Kosulları</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copyright">Copyright © 2026 www.biletinial.com</div>
+      <div class="footer-payment">
+        <span class="payment-badge visa">VISA</span>
+        <span class="payment-badge mc">MC</span>
+        <span class="payment-badge troy">TROY</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  const sectionIds = ['detail','cast','buy-section','reviews','rules'];
+  const tabs = document.querySelectorAll('.tab');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top < 200) current = id;
+    });
+    tabs.forEach(t => {
+      t.classList.remove('active');
+      if (t.getAttribute('href') === '#' + current) t.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
